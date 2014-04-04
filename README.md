@@ -1,0 +1,4 @@
+HideksApplicationStructure
+==========================
+
+Sample application structure
