@@ -1,0 +1,26 @@
+{if $pagination.totalPages > 1}
+    <ul>
+        {if $pagination.firstPage}
+            <li><a href="{$pagination.firstPageUrl}">&laquo;&laquo; Primeira</a></li>
+            <li><a href="{$pagination.previousPageUrl}">&laquo; Anterior</a></li>
+        {/if}
+
+        {foreach from=$pagination.sequence item=sequence name=sequence}
+            {if $smarty.foreach.sequence.iteration == $pagination.currentPage}
+                <li><span>{$smarty.foreach.sequence.iteration}</span></li>
+            {else}
+                <li><a href="{$sequence}">{$smarty.foreach.sequence.iteration}</a></li>
+            {/if}
+        {/foreach}
+
+        {if ($pagination.currentPage + 4) < $pagination.totalPages}
+            <li><span>...</span></li>
+            <li><a href="{$pagination.totalPagesUrl}">{$pagination.totalPages}</a></li>
+        {/if}
+
+        {if $pagination.lastPage}
+            <li><a href="{$pagination.nextPageUrl}">Próximo &raquo;</a></li>
+            <li><a href="{$pagination.lastPageUrl}">Última &raquo;</a></li>
+        {/if}
+    </ul>
+{/if}
