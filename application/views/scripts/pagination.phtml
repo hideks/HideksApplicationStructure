@@ -6,10 +6,10 @@
         {/if}
 
         {foreach from=$pagination.sequence item=sequence name=sequence}
-            {if $smarty.foreach.sequence.iteration == $pagination.currentPage}
-                <li><span>{$smarty.foreach.sequence.iteration}</span></li>
+            {if $sequence.num == $pagination.currentPage}
+                <em>{$sequence.num}</em>
             {else}
-                <li><a href="{$sequence}">{$smarty.foreach.sequence.iteration}</a></li>
+                <a href="{$sequence.url}">{$sequence.num}</a>
             {/if}
         {/foreach}
 
