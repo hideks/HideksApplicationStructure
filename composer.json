@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">=5.3.0",
-        "hidekscorporation/hideksframework": "1.15.4-beta",
+        "hidekscorporation/hideksframework": "1.15.5-beta",
         "hidekscorporation/smarty": "3.1.19",
         "php-activerecord/php-activerecord": "1.1.*"
     }
