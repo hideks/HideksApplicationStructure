@@ -1,8 +1,12 @@
 <?php
 
-class Index extends \Hideks\Controller {
+use Hideks\Controller;
+
+class Index extends Controller
+{
     
-    public function indexAction() {
+    public function indexAction()
+    {
         $this->renderTo('html');
     }
     
